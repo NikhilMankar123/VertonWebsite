@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veriton Technical Solutions - Intelligent Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;family=Roboto+Flex:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-glass": "rgba(255, 255, 255, 0.7)",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface": "#1a1c1c",
+                        "outline": "#72777f",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#cfe5ff",
+                        "secondary-container": "#e4e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#1d496f",
+                        "on-tertiary-fixed": "#2b1700",
+                        "on-secondary-container": "#646464",
+                        "tertiary-container": "#553300",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary": "#382000",
+                        "primary-container": "#0a3d62",
+                        "on-background": "#1a1c1c",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-container": "#e69200",
+                        "background": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#474747",
+                        "primary": "#002743",
+                        "primary-fixed-dim": "#a2caf7",
+                        "data-blue": "#1E3A8A",
+                        "secondary-fixed": "#e4e2e2",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "outline-variant": "#c2c7cf",
+                        "surface": "#f9f9f9",
+                        "secondary": "#5e5e5e",
+                        "surface-container-low": "#f3f3f3",
+                        "on-surface-variant": "#42474e",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed": "#001d34",
+                        "tertiary-fixed-dim": "#ffb961",
+                        "border-industrial": "#D1D5DB",
+                        "on-primary-container": "#80a8d3",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#a2caf7",
+                        "tertiary-fixed": "#ffddb9",
+                        "on-tertiary-fixed-variant": "#663e00",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#386188"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-sm": ["Open Sans"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "highlight": ["Roboto Flex"],
+                        "label-caps": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Open Sans"],
+                        "body-md": ["Open Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "highlight": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        }
+        .glass-card:hover {
+            box-shadow: 0 15px 45px rgba(10, 61, 98, 0.12);
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: theme('colors.primary');
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-md dark:bg-surface-glass border-b border-white/20 shadow-sm transition-all duration-300" id="navbar">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">factory</span>
+<span>Veriton</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="nav-link active font-highlight text-highlight text-primary font-bold" href="#">Home</a>
+<a class="nav-link font-highlight text-highlight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="nav-link font-highlight text-highlight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="nav-link font-highlight text-highlight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#industries">Industries</a>
+<a class="nav-link font-highlight text-highlight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#why-veriton">Why Veriton</a>
+<a class="nav-link font-highlight text-highlight text-on-surface-variant hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+</div>
+<button class="hidden md:flex bg-primary text-white font-highlight text-highlight px-6 py-2 rounded-lg hover:bg-primary-container transition-all duration-300 scale-95 active:scale-90 shadow-md">
+                Get Quote
+            </button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-30" data-alt="A sprawling, high-tech industrial manufacturing plant interior. Bright, clean, white light floods the space. Modern robotic arms are visible along an assembly line. Engineers in cleanroom suits and hardhats are inspecting data on tablets. The overall aesthetic is extremely modern, corporate, and pristine, utilizing a light mode palette with deep blue machinery accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBo1S_Yih7aIDgke_pBktxZWZEDiOUZVfxMCSwvI7lMGv_iVd2729dSxsMpYUXXJ1b9I0_5bYR2piigjInMSoFpyehAE60EDdAspnE7QuPguRYzcQT_bxi5bvB90XCQ4ba6dOwZiqhGUzH11PS4VVQZJcQp4s6EFzJPV8APviUUBjw9EJ-rJtOI1zvXGfZVPmghT7irKCIuX5NbFYF_DI43hmEePV3iskNhVHA1BrEd5YAFk2_2RZqo')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 w-full flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6 fade-up">
+<h1 class="font-headline-xl text-headline-xl md:text-[56px] md:leading-[64px] text-primary">
+                        Delivering Intelligent Solutions with <span class="text-data-blue">Precision &amp; Trust</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Empowering global industries with expert technical manpower, rigorous quality assurance, and streamlined operational excellence. We build the foundation for tomorrow's innovations.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-primary text-white font-highlight text-highlight px-8 py-3 rounded-lg hover:bg-primary-container transition-all shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center gap-2">
+                            Explore Our Services
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-transparent text-primary font-highlight text-highlight px-8 py-3 rounded-lg border-2 border-outline hover:bg-surface-container-low transition-all active:scale-95 text-center">
+                            Request a Consultation
+                        </button>
+</div>
+</div>
+<div class="flex-1 relative w-full h-[500px] hidden md:block">
+<!-- Floating Cards Simulation -->
+<div class="absolute top-10 right-20 glass-card p-6 rounded-xl w-64 shadow-lg border-t-4 border-t-data-blue animate-[bounce_4s_infinite]">
+<div class="flex items-center gap-4 mb-2">
+<div class="bg-primary-fixed p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<h3 class="font-highlight text-highlight text-primary font-bold">Quality Assurance</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ISO 9001 Certified Processes</p>
+</div>
+<div class="absolute bottom-20 left-10 glass-card p-6 rounded-xl w-64 shadow-lg border-t-4 border-t-tertiary-fixed-dim animate-[bounce_5s_infinite_reverse]">
+<div class="flex items-center gap-4 mb-2">
+<div class="bg-tertiary-fixed p-2 rounded-lg">
+<span class="material-symbols-outlined text-tertiary-container">engineering</span>
+</div>
+<h3 class="font-highlight text-highlight text-primary font-bold">Engineering Support</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elite Technical Manpower</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface-container-lowest relative" id="about">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative rounded-2xl overflow-hidden shadow-xl group fade-up">
+<div class="bg-cover bg-center w-full h-[500px] transition-transform duration-700 group-hover:scale-105" data-alt="A medium shot of a diverse team of three professional engineers in a bright, modern control room. They are looking at a large digital schematic on a glass screen. The environment is well-lit with natural daylight. They wear corporate casual attire with safety glasses. The color palette emphasizes clean whites, light grays, and Veriton's deep blue." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqvkpTdgspm0zJ12jt1q0cj3KkiKmp8Eb_6SajIEc6erp1DELU4o1OscpnGeLIHpYUNYtE_BXab3i-gS8vzkwS1ZuausNW7lGO71dquNWMqKY0V0aLkqlu9de9Gj1YUozL9KYxr6Im5MoaAAUWYzRMdVMf8qhgJ1lijRo3ySEX6FJvMTF8CfRvnfEqXmEnXNU_fiKXXyVP8JNlYydpAcE0xaBNmduAzkpR94UIPKTQvkd2C25lZ1U0')"></div>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="space-y-6 fade-up">
+<div class="inline-block px-3 py-1 bg-surface-container-high rounded-full font-label-caps text-label-caps text-primary tracking-widest uppercase">
+                            About Us
+                        </div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+                            Engineering the Future of Industrial Operations
+                        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Veriton Technical Solutions is a premier provider of industrial support services, specializing in deploying high-caliber technical expertise and establishing unyielding quality standards. We bridge the gap between complex engineering challenges and seamless operational execution.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            With a footprint across major global manufacturing hubs, we partner with industry leaders to ensure their processes are optimized, their supply chains are robust, and their products meet the most stringent international standards.
+                        </p>
+<button class="bg-transparent text-primary font-highlight text-highlight px-6 py-2 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all active:scale-95 mt-4 inline-flex items-center gap-2">
+                            Learn More About Veriton
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="py-24 bg-surface-variant/30 relative" id="services">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16 fade-up">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Core Competencies</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Comprehensive solutions designed to elevate manufacturing quality and operational efficiency.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Service 1 -->
+<div class="glass-card p-8 rounded-2xl md:col-span-2 group hover:bg-white transition-colors duration-300 fade-up">
+<div class="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Inspection &amp; Quality Assurance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-lg">Rigorous multi-point inspection protocols ensuring every component meets exact specifications. We deploy advanced metrology and visual validation systems.</p>
+<a class="font-highlight text-highlight text-data-blue flex items-center gap-1 group-hover:gap-2 transition-all" href="#">Explore Service <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service 2 -->
+<div class="glass-card p-8 rounded-2xl group hover:bg-white transition-colors duration-300 fade-up" style="transition-delay: 100ms;">
+<div class="bg-primary/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3 text-xl">Technical Manpower</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Deploying specialized engineers and certified technicians for project-critical roles.</p>
+<a class="font-highlight text-highlight text-data-blue flex items-center gap-1 group-hover:gap-2 transition-all mt-auto" href="#">Details <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed w-full py-12 border-t border-outline-variant mt-20">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1 space-y-4">
+<div class="font-headline-md text-headline-md font-bold text-on-primary flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-on-primary text-3xl" style="font-variation-settings: 'FILL' 1;">factory</span>
+<span>Veriton</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary/80">Intelligent engineering and technical solutions for modern manufacturing.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-primary mb-4 opacity-70">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">About Us</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">Careers</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-primary mb-4 opacity-70">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps text-on-primary mb-4 opacity-70">Standards</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">Sustainability</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant hover:text-on-primary transition-colors hover:underline decoration-on-tertiary-container" href="#">Safety Standards</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-8 border-t border-outline-variant/30 text-center">
+<p class="font-body-sm text-body-sm text-surface-variant opacity-80">© 2024 Veriton Technical Solutions. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for fade-up animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-md');
+                    navbar.classList.replace('bg-surface-glass', 'bg-white/90');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                    navbar.classList.replace('bg-white/90', 'bg-surface-glass');
+                }
+            });
+        });
+    </script>
+</body></html>
