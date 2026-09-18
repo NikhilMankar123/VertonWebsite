@@ -1,0 +1,10 @@
+# Enforce LF line endings in the repo for all text files.
+# Prevents LF-vs-CRLF divergence between local commits and GitHub web uploads.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
