@@ -2,16 +2,23 @@
 :root{
   --primary:#0A3D62; --secondary:#4A4A4A; --accent:#F39C12; --bg:#F4F4F4;
 }
-html{scroll-behavior:smooth}
-body{font-family:'Open Sans',sans-serif;background:var(--bg);color:#1A1C1C}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Open Sans',sans-serif;background:var(--bg);color:#1A1C1C;overflow-x:hidden}
 h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+img,video{max-width:100%;height:auto}
+img{overflow-clip-margin:unset}
 .font-highlight{font-family:'Roboto',sans-serif;font-style:italic;font-weight:500}
 .nav-link{position:relative;font-weight:600}
 .nav-link::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--accent);transition:width .3s}
 .nav-link:hover::after,.nav-link.active::after{width:100%}
-.glass{background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6)}
+.glass{background:rgba(255,255,255,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6)}
 .fade-up{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .fade-up.visible{opacity:1;transform:none}
+/* Content must never stay hidden when JS/IntersectionObserver is unavailable */
+.no-js .fade-up{opacity:1;transform:none}
+/* Short viewports / tiny screens: disable heavy scroll-in transforms to protect layout */
+@media (max-height:500px),(max-width:360px){.fade-up{opacity:1;transform:none;transition:none}}
+@media (prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 .hero-pattern{background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1px);background-size:22px 22px}
 .card-hover{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .card-hover:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,61,98,.12);border-color:var(--accent)}
@@ -22,7 +29,13 @@ h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
 .btn-primary:hover{background:#083152}
 #cookie-banner{transition:transform .4s ease,opacity .4s ease}
 .mobile-menu{transition:max-height .35s ease,opacity .35s ease;max-height:0;overflow:hidden;opacity:0}
-.mobile-menu.open{max-height:560px;opacity:1}
+.mobile-menu.open{max-height:640px;opacity:1}
+/* Forms: Tailwind CDN alone may not style inputs — guarantee borders/padding/layout */
+form input,form select,form textarea{display:block;width:100%;border:1px solid #D1D5DB;border-radius:.5rem;background:#fff;color:#1A1C1C;padding:.65rem .8rem;font-size:.925rem;line-height:1.5;min-width:0}
+form input::placeholder,form textarea::placeholder{color:#9CA3AF}
+form input:focus,form select:focus,form textarea:focus{outline:2px solid var(--primary);outline-offset:0;border-color:var(--primary)}
+form label{display:block;margin-bottom:.25rem}
 .prose-legal h2{font-weight:700;color:var(--primary);margin:1.6rem 0 .6rem;font-size:1.35rem}
 .prose-legal p,.prose-legal li{color:#4A4A4A;line-height:1.75}
 .prose-legal ul{list-style:disc;padding-left:1.4rem;margin:.6rem 0}
+

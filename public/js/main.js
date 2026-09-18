@@ -1,4 +1,5 @@
 // Veriton shared JS: mobile nav, animations, cookie consent, forms, active links
+document.documentElement.classList.remove('no-js');
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu
   const btn = document.getElementById('menu-btn');
@@ -14,11 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  // Reveal on scroll (guard: if IO unsupported, show everything immediately)
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  }
 
   // Navbar shadow
   const nav = document.getElementById('navbar');
