@@ -2,496 +2,269 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Veriton Technical Solutions - Intelligent Solutions</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans:wght@400;600&amp;family=Roboto:ital,wght@0,500;1,500&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0A3D62",
-                        "secondary": "#4A4A4A",
-                        "accent": "#F39C12",
-                        "background": "#F4F4F4",
-                        "surface-glass": "rgba(255, 255, 255, 0.8)",
-                        "surface-card": "#FFFFFF",
-                        "on-surface": "#1A1C1C",
-                        "on-surface-variant": "#4A4A4A"
-                    },
-                    spacing: {
-                        "gutter": "24px",
-                        "margin-mobile": "16px",
-                        "margin-desktop": "40px",
-                        "container-max": "1280px"
-                    },
-                    fontFamily: {
-                        "heading": ["Montserrat", "sans-serif"],
-                        "body": ["Open Sans", "sans-serif"],
-                        "highlight": ["Roboto", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #F4F4F4;
-            color: #1A1C1C;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .font-highlight-italic {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
-            font-style: italic;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-        }
-        .glass-card:hover {
-            box-shadow: 0 12px 35px rgba(10, 61, 98, 0.1);
-        }
-        .fade-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #F39C12;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Veriton Technical Solutions | QA, Validation & Industrial Manpower</title>
+<meta name="description" content="Veriton Technical Solutions: quality assurance, validation, process optimization and skilled industrial manpower supply. Call 9545459346, admin@veritoncore.com"/>
+<link rel="icon" type="image/png" href="public/assets/images/logo.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#0A3D62',secondary:'#4A4A4A',accent:'#F39C12',background:'#F4F4F4'},fontFamily:{heading:['Montserrat','sans-serif'],body:['Open Sans','sans-serif']}}}}</script>
+<link rel="stylesheet" href="public/css/style.css"/>
 </head>
-<body class="bg-background text-on-surface antialiased overflow-x-hidden">
-
-<!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-md border-b border-gray-200 shadow-sm transition-all duration-300" id="navbar">
-    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-20">
-        <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
-            <span class="material-symbols-outlined text-accent text-3xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
-            <span>Veriton</span>
-        </a>
-        <div class="hidden md:flex items-center gap-8 font-semibold text-secondary">
-            <a class="nav-link active text-primary" href="#">Home</a>
-            <a class="nav-link hover:text-primary transition-colors" href="#about">About Us</a>
-            <a class="nav-link hover:text-primary transition-colors" href="#vision-mission">Vision & Values</a>
-            <a class="nav-link hover:text-primary transition-colors" href="#services">Services</a>
-            <a class="nav-link hover:text-primary transition-colors" href="#why-veriton">Why Choose Us</a>
-            <a class="nav-link hover:text-primary transition-colors" href="#contact">Contact</a>
-        </div>
-        <a href="#contact" class="hidden md:flex bg-primary text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-opacity-90 transition-all shadow-md active:scale-95">
-            Get in Touch
-        </a>
-        <button class="md:hidden text-primary">
-            <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
-    </div>
+<body class="bg-background antialiased overflow-x-hidden">
+<div class="bg-primary text-white text-[13px]">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 flex items-center justify-between h-10">
+<div class="flex items-center gap-5">
+<a href="tel:+919545459346" class="flex items-center gap-1.5 hover:text-accent"><span class="material-symbols-outlined text-[16px]">call</span>9545459346</a>
+<a href="mailto:admin@veritoncore.com" class="hidden sm:flex items-center gap-1.5 hover:text-accent"><span class="material-symbols-outlined text-[16px]">mail</span>admin@veritoncore.com</a>
+<span class="hidden lg:flex items-center gap-1.5 text-white/80"><span class="material-symbols-outlined text-[16px]">location_on</span>Pan-India Industrial Sites</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden md:inline text-white/80">Mon-Sat 9:00-19:00 IST</span>
+<a href="public/subpages/quote.html" class="font-semibold text-accent">Request Manpower</a>
+</div>
+</div>
+</div>
+<header id="navbar" class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 flex items-center justify-between h-[76px]">
+<a href="index.html" class="flex items-center gap-3">
+<img src="public/assets/images/logo.png" alt="Veriton logo" class="h-12 w-12 object-contain rounded-lg border border-gray-100 bg-white"/>
+<span class="leading-tight"><span class="block font-heading font-bold text-primary text-xl">VERITON</span><span class="block text-[11px] font-semibold tracking-[0.18em] text-secondary uppercase">Technical Solutions</span></span>
+</a>
+<nav class="hidden lg:flex items-center gap-7 text-[15px] text-secondary">
+<a data-nav href="index.html" class="nav-link hover:text-primary">Home</a>
+<a data-nav href="public/subpages/about.html" class="nav-link hover:text-primary">About Us</a>
+<a data-nav href="public/subpages/services.html" class="nav-link hover:text-primary">Services</a>
+<a data-nav href="public/subpages/manpower.html" class="nav-link hover:text-primary">Manpower</a>
+<a data-nav href="public/subpages/contact.html" class="nav-link hover:text-primary">Contact</a>
 </nav>
+<div class="hidden lg:flex items-center gap-3">
+<a href="public/subpages/contact.html" class="px-5 py-2.5 rounded-lg border-2 border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-white transition">Get in Touch</a>
+<a href="public/subpages/quote.html" class="btn-accent px-5 py-2.5 rounded-lg text-white font-semibold text-sm">Request Manpower</a>
+</div>
+<button id="menu-btn" class="lg:hidden text-primary p-2" aria-label="Menu"><span class="material-symbols-outlined text-3xl">menu</span></button>
+</div>
+<div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-gray-100">
+<div class="px-5 py-4 flex flex-col font-semibold text-secondary">
+<a href="index.html" class="py-2.5 border-b border-gray-100">Home</a>
+<a href="public/subpages/about.html" class="py-2.5 border-b border-gray-100">About Us</a>
+<a href="public/subpages/services.html" class="py-2.5 border-b border-gray-100">Services</a>
+<a href="public/subpages/manpower.html" class="py-2.5 border-b border-gray-100">Manpower Supply</a>
+<a href="public/subpages/contact.html" class="py-2.5 border-b border-gray-100">Contact</a>
+<a href="public/subpages/quote.html" class="my-3 text-center btn-accent text-white py-3 rounded-lg">Request Manpower</a>
+</div>
+</div>
+</header>
+<main>
+<section class="relative overflow-hidden bg-primary">
+<div class="absolute inset-0"><img src="public/assets/images/hero-plant.jpeg" alt="Mechanical plant" class="w-full h-full object-cover opacity-30"/><div class="absolute inset-0 bg-gradient-to-r from-[#0A3D62] via-[#0A3D62]/90 to-[#0A3D62]/40"></div></div>
+<div class="relative max-w-[1280px] mx-auto px-4 md:px-10 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+<div class="fade-up">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 border border-white/20 rounded-full text-[12px] font-bold uppercase tracking-widest text-accent"><span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>QA - Validation - Manpower</div>
+<h1 class="font-heading font-bold text-white text-4xl md:text-5xl leading-[1.1] mt-5">Delivering Intelligent Solutions with <span class="text-accent">Precision &amp; Trust</span></h1>
+<p class="text-white/85 text-lg leading-relaxed mt-5 max-w-xl">Veriton Technical Solutions is your trusted partner for quality assurance, validation, and process optimization, delivering reliable and scalable solutions across diverse industries.</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<a href="public/subpages/services.html" class="btn-accent text-white font-semibold px-8 py-3.5 rounded-lg flex items-center justify-center gap-2">Explore Our Services <span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+<a href="public/subpages/manpower.html" class="px-8 py-3.5 rounded-lg border-2 border-white/40 text-white font-semibold hover:bg-white hover:text-primary transition flex items-center justify-center gap-2"><span class="material-symbols-outlined text-[18px]">groups</span>Hire Skilled Manpower</a>
+</div>
+</div>
+<div class="fade-up relative">
+<div class="glass rounded-2xl p-3 shadow-2xl relative">
+<img src="public/assets/images/team-manpower.jpeg" alt="Deployed manpower team" class="rounded-xl w-full h-[360px] md:h-[430px] object-cover"/>
+<div class="absolute left-6 right-6 -bottom-6 bg-white rounded-xl shadow-xl border border-gray-100 p-4 flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0"><span class="material-symbols-outlined">verified</span></div>
+<div><p class="font-heading font-bold text-primary text-[15px]">Certified - Trained - Site-Ready Teams</p><p class="text-[13px] text-secondary">QA/QC, Fitters, Welders, Warehouse, Logistics</p></div>
+</div>
+</div>
+<section class="bg-white border-b border-gray-200">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 py-4 flex flex-wrap items-center gap-x-8 gap-y-2 text-[13px] text-secondary"><span class="font-bold text-accent uppercase text-[11px] tracking-widest">Trusted for:</span><span>Inspection &amp; QA</span><span>Manpower Supply</span><span>Warehouse &amp; Inventory</span><span>Logistics &amp; Dispatch</span><span>Audits &amp; Training</span></div>
+</section>
+<section id="about" class="py-16 md:py-20">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-12 items-center">
+<div class="fade-up grid grid-cols-2 gap-4">
+<img src="public/assets/images/warehouse-operations.jpeg" alt="Warehouse operations" class="rounded-2xl h-64 w-full object-cover shadow"/>
+<img src="public/assets/images/inspection-qa.jpeg" alt="Inspection and QA" class="rounded-2xl h-64 w-full object-cover shadow mt-8"/>
+</div>
+<div class="fade-up">
+<span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">About Us</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-4">A Team Built for Industrial Excellence</h2>
+<p class="text-secondary leading-relaxed">At Veriton Technical Solutions, we are a team of passionate and experienced professionals dedicated to delivering intelligent, reliable, and result-driven solutions across diverse industries.</p>
+<p class="text-secondary leading-relaxed mt-3">We specialize in quality assurance, validation, verification, and process optimization services that help businesses improve efficiency, maintain standards, and achieve sustainable growth. With a strong focus on innovation, precision, and client satisfaction, our flexible teams support projects across multiple locations with consistent excellence.</p>
+<div class="grid sm:grid-cols-2 gap-3 mt-6 text-sm">
+<div class="bg-white rounded-xl border p-4 flex gap-3 items-start"><span class="material-symbols-outlined text-accent">groups</span><span><b class="text-primary">Skilled Manpower Supply</b><br/><span class="text-secondary">Contract &amp; shutdown teams for mechanical plants.</span></span></div>
+<div class="bg-white rounded-xl border p-4 flex gap-3 items-start"><span class="material-symbols-outlined text-accent">fact_check</span><span><b class="text-primary">QA / QC &amp; Validation</b><br/><span class="text-secondary">Inspection, verification &amp; process audits.</span></span></div>
+</div>
+<div class="flex flex-wrap gap-3 mt-6">
+<a href="public/subpages/about.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold text-sm">More About Us</a>
+<a href="public/subpages/manpower.html" class="px-6 py-3 rounded-lg border-2 border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-white transition">Our Manpower Model</a>
+</div>
+</div>
+</div>
+</section>
 
-<main class="pt-20">
-    <!-- Hero Section -->
-    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16">
-        <div class="absolute inset-0 z-0">
-            <div class="bg-cover bg-center w-full h-full opacity-20" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80')"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
-        </div>
-        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10 w-full flex flex-col md:flex-row items-center gap-12">
-            <div class="flex-1 space-y-6 fade-up">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-semibold uppercase tracking-wider text-primary shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-accent"></span> Process Optimization & Quality
-                </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                    Delivering Intelligent Solutions with <span class="text-accent">Precision & Trust</span>
-                </h1>
-                <p class="text-lg md:text-xl text-secondary max-w-2xl leading-relaxed">
-                    Veriton Technical Solutions is your trusted partner for quality assurance, validation, and process optimization, delivering reliable and scalable solutions across diverse industries.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#services" class="bg-accent text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-amber-600 transition-all shadow-md hover:shadow-lg active:scale-95 flex items-center justify-center gap-2">
-                        Explore Our Services
-                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
-                    <a href="#about" class="bg-white text-primary font-semibold px-8 py-3.5 rounded-lg border border-gray-300 hover:bg-gray-50 transition-all active:scale-95 text-center shadow-sm">
-                        Learn About Us
-                    </a>
-                </div>
-            </div>
-            <div class="flex-1 relative w-full h-[400px] hidden md:block">
-                <div class="absolute top-10 right-10 glass-card p-6 rounded-xl w-72 border-l-4 border-l-accent shadow-lg animate-[bounce_4s_infinite]">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="bg-primary/10 p-2 rounded-lg text-primary">
-                            <span class="material-symbols-outlined">verified</span>
-                        </div>
-                        <h3 class="font-bold text-primary">Quality Assurance</h3>
-                    </div>
-                    <p class="text-sm text-secondary">Reliable and scalable process validation.</p>
-                </div>
-                <div class="absolute bottom-12 left-10 glass-card p-6 rounded-xl w-72 border-l-4 border-l-primary shadow-lg animate-[bounce_5s_infinite_reverse]">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="bg-accent/10 p-2 rounded-lg text-accent">
-                            <span class="material-symbols-outlined">trending_up</span>
-                        </div>
-                        <h3 class="font-bold text-primary">Process Optimization</h3>
-                    </div>
-                    <p class="text-sm text-secondary">Driving efficiency and sustainable growth.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
+<section id="vision-mission" class="py-16 bg-white border-y border-gray-200">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10">
+<div class="text-center max-w-3xl mx-auto mb-10 fade-up">
+<span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">Vision, Mission &amp; Values</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary mt-3">What Drives Veriton</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-background p-8 rounded-2xl border border-gray-200 fade-up"><div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-5"><span class="material-symbols-outlined">visibility</span></div><h3 class="text-2xl font-bold text-primary mb-2">Our Vision</h3><p class="text-secondary leading-relaxed">To become a leading provider of intelligent solutions that inspire trust, efficiency, and sustainable growth.</p></div>
+<div class="bg-background p-8 rounded-2xl border border-gray-200 border-t-4 border-t-accent fade-up"><div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-5"><span class="material-symbols-outlined">rocket_launch</span></div><h3 class="text-2xl font-bold text-primary mb-2">Our Mission</h3><p class="text-secondary leading-relaxed">To deliver value-driven solutions that enhance business performance through innovation, expertise, and operational excellence.</p></div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-6 fade-up">
+<div class="bg-background p-6 rounded-xl text-center border hover:border-accent transition"><div class="text-3xl mb-2">✨</div><h4 class="font-bold text-primary text-sm">Excellence</h4></div>
+<div class="bg-background p-6 rounded-xl text-center border hover:border-accent transition"><div class="text-3xl mb-2">💡</div><h4 class="font-bold text-primary text-sm">Innovation</h4></div>
+<div class="bg-background p-6 rounded-xl text-center border hover:border-accent transition"><div class="text-3xl mb-2">🤝</div><h4 class="font-bold text-primary text-sm">Trust &amp; Transparency</h4></div>
+<div class="bg-background p-6 rounded-xl text-center border hover:border-accent transition"><div class="text-3xl mb-2">👥</div><h4 class="font-bold text-primary text-sm">Collaboration</h4></div>
+<div class="bg-background p-6 rounded-xl text-center border hover:border-accent transition"><div class="text-3xl mb-2">⚡</div><h4 class="font-bold text-primary text-sm">Agility</h4></div>
+<div class="bg-background p-6 rounded-xl text-center border hover:border-accent transition"><div class="text-3xl mb-2">🎯</div><h4 class="font-bold text-primary text-sm">Customer Success</h4></div>
+</div>
+</div>
+<section id="services" class="py-16 md:py-20">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10">
+<div class="text-center max-w-3xl mx-auto mb-12 fade-up">
+<span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">What We Offer</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-3">Our Services</h2>
+<p class="text-secondary">We provide end-to-end professional solutions that enable organizations to improve quality, optimize operations, and drive business excellence.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined">fact_check</span></div><h3 class="font-bold text-primary text-lg mb-2">Inspection &amp; Quality Assurance</h3><p class="text-sm text-secondary">Incoming, in-process &amp; final inspection, QA frameworks and documentation.</p><a href="public/subpages/service-inspection-qa.html" class="text-accent text-sm font-semibold mt-3 inline-block">Learn more →</a></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined">shopping_cart</span></div><h3 class="font-bold text-primary text-lg mb-2">Procurement &amp; Supply Support</h3><p class="text-sm text-secondary">Vendor coordination, expediting and supply support for plant needs.</p><a href="public/subpages/service-procurement.html" class="text-accent text-sm font-semibold mt-3 inline-block">Learn more →</a></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined">settings_suggest</span></div><h3 class="font-bold text-primary text-lg mb-2">Operations &amp; Process Management</h3><p class="text-sm text-secondary">SOPs, line management and continuous improvement on shopfloors.</p><a href="public/subpages/service-operations.html" class="text-accent text-sm font-semibold mt-3 inline-block">Learn more →</a></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined">warehouse</span></div><h3 class="font-bold text-primary text-lg mb-2">Warehouse &amp; Inventory Management</h3><p class="text-sm text-secondary">Stores, stock accuracy, 5S and trained warehouse manpower.</p><a href="public/subpages/service-warehouse.html" class="text-accent text-sm font-semibold mt-3 inline-block">Learn more →</a></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined">local_shipping</span></div><h3 class="font-bold text-primary text-lg mb-2">Logistics &amp; Dispatch Coordination</h3><p class="text-sm text-secondary">Dispatch planning, loading supervision and transporter coordination.</p><a href="public/subpages/service-logistics.html" class="text-accent text-sm font-semibold mt-3 inline-block">Learn more →</a></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined">school</span></div><h3 class="font-bold text-primary text-lg mb-2">Training &amp; Capability Development</h3><p class="text-sm text-secondary">Skill training, safety induction and on-the-job capability building.</p><a href="public/subpages/service-training.html" class="text-accent text-sm font-semibold mt-3 inline-block">Learn more →</a></div>
+</div>
+<div class="bg-primary rounded-2xl p-8 mt-8 flex flex-col md:flex-row items-center gap-6 justify-between fade-up">
+<div class="flex items-center gap-4"><div class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center"><span class="material-symbols-outlined">playlist_add_check</span></div><div><h3 class="text-white font-bold text-lg">Audit &amp; Performance Assessment</h3><p class="text-white/75 text-sm">Gap audits, KPI reviews and improvement roadmaps for your plant.</p></div></div>
+<a href="public/subpages/service-audit.html" class="bg-white text-primary font-semibold px-6 py-3 rounded-lg text-sm shrink-0">Explore Audit Services</a>
+</div>
+</div>
+</section>
 
-    <!-- About Section -->
-    <section class="py-20 bg-white border-y border-gray-200" id="about">
-        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="relative rounded-2xl overflow-hidden shadow-lg fade-up">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Veriton Technical Solutions Team" class="w-full h-[420px] object-cover"/>
-                    <div class="absolute inset-0 bg-primary/10"></div>
-                </div>
-                <div class="space-y-6 fade-up">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">About Us</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary">
-                        Dedicated to Delivering Intelligent & Result-Driven Solutions
-                    </h2>
-                    <p class="text-secondary leading-relaxed">
-                        At Veriton Technical Solutions, we are a team of passionate and experienced professionals dedicated to delivering intelligent, reliable, and result-driven solutions across diverse industries.
-                    </p>
-                    <p class="text-secondary leading-relaxed">
-                        We specialize in quality assurance, validation, verification, and process optimization services that help businesses improve efficiency, maintain standards, and achieve sustainable growth. With a strong focus on innovation, precision, and client satisfaction, our flexible teams are equipped to support projects across multiple locations with consistent excellence.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="manpower-strip" class="py-16 bg-white border-y border-gray-200">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-10 items-center">
+<div class="fade-up">
+<span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">Mechanical Industry Manpower</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-4">Dependable Manpower for Plants &amp; Warehouses</h2>
+<p class="text-secondary leading-relaxed">From QA/QC inspectors and fitters to warehouse crews and dispatch coordinators — Veriton mobilizes verified, safety-trained teams on contract, shutdown, or long-term deployment.</p>
+<ul class="mt-5 space-y-2.5 text-secondary text-[15px]">
+<li class="flex gap-2"><span class="material-symbols-outlined text-accent">check_circle</span>QA/QC, Welders, Fitters, Electricians, Helpers</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-accent">check_circle</span>Background-verified, PPE-trained, supervisor-led teams</li>
+<li class="flex gap-2"><span class="material-symbols-outlined text-accent">check_circle</span>Fast replacement &amp; attendance-managed supply</li>
+</ul>
+<div class="flex flex-wrap gap-3 mt-6">
+<a href="public/subpages/manpower.html" class="btn-accent text-white px-6 py-3 rounded-lg font-semibold text-sm">Explore Manpower Supply</a>
+<a href="public/subpages/quote.html" class="px-6 py-3 rounded-lg border-2 border-primary text-primary font-semibold text-sm">Get a Manpower Quote</a>
+</div>
+</div>
+<div class="fade-up"><img src="public/assets/images/hero-plant.jpeg" alt="Industrial manpower at work" class="rounded-2xl h-[380px] w-full object-cover shadow-xl"/></div>
+</div>
+</section>
+<section id="why-veriton" class="py-16 md:py-20">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10">
+<div class="text-center max-w-3xl mx-auto mb-12 fade-up">
+<span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">Why Choose Veriton?</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-3">Built on Trust, Expertise &amp; Performance</h2>
+<p class="text-secondary">Successful partnerships are built on trust, expertise, and consistent performance. Our commitment to excellence delivers scalable, result-oriented solutions.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><span class="material-symbols-outlined text-accent text-3xl">factory</span><h3 class="font-bold text-primary mt-3 mb-1">Deep Industry Knowledge</h3><p class="text-sm text-secondary">Hands-on mechanical, QA and warehouse domain expertise.</p></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><span class="material-symbols-outlined text-accent text-3xl">handshake</span><h3 class="font-bold text-primary mt-3 mb-1">Client-Centric Approach</h3><p class="text-sm text-secondary">Flexible teams shaped around your shift and site needs.</p></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><span class="material-symbols-outlined text-accent text-3xl">manage_search</span><h3 class="font-bold text-primary mt-3 mb-1">Process Excellence</h3><p class="text-sm text-secondary">SOP-driven execution with audits and KPI tracking.</p></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><span class="material-symbols-outlined text-accent text-3xl">engineering</span><h3 class="font-bold text-primary mt-3 mb-1">Skilled &amp; Dedicated Teams</h3><p class="text-sm text-secondary">Verified manpower with supervision and training.</p></div>
+<div class="bg-white p-7 rounded-2xl border card-hover fade-up"><span class="material-symbols-outlined text-accent text-3xl">bolt</span><h3 class="font-bold text-primary mt-3 mb-1">Agile Execution &amp; Timely Delivery</h3><p class="text-sm text-secondary">Rapid mobilization for shutdowns and ramp-ups.</p></div>
+<div class="bg-primary p-7 rounded-2xl fade-up"><p class="font-highlight text-accent">Focused on quality, driven by innovation, and committed to delivering measurable business value.</p><a href="public/subpages/about.html" class="text-white text-sm font-semibold mt-3 inline-block underline">Our story →</a></div>
+</div>
+</div>
+</section>
 
-    <!-- Vision, Mission & Values -->
-    <section class="py-20 bg-background" id="vision-mission">
-        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop space-y-16">
-            <!-- Vision & Mission Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 fade-up border-top-4 border-t-primary">
-                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
-                        <span class="material-symbols-outlined text-2xl">visibility</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3">Our Vision</h3>
-                    <p class="text-secondary leading-relaxed">
-                        To become a leading provider of intelligent solutions that inspire trust, efficiency, and sustainable growth.
-                    </p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 fade-up border-top-4 border-t-accent">
-                    <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center text-accent mb-6">
-                        <span class="material-symbols-outlined text-2xl">rocket_launch</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-primary mb-3">Our Mission</h3>
-                    <p class="text-secondary leading-relaxed">
-                        To deliver value-driven solutions that enhance business performance through innovation, expertise, and operational excellence.
-                    </p>
-                </div>
-            </div>
+</section>
 
-            <!-- Values -->
-            <div class="fade-up">
-                <div class="text-center mb-12">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">Core Principles</span>
-                    <h2 class="text-3xl font-bold text-primary mt-3">Our Values</h2>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-200 hover:border-accent transition-colors">
-                        <div class="text-3xl mb-2">✨</div>
-                        <h4 class="font-bold text-primary text-sm">Excellence</h4>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-200 hover:border-accent transition-colors">
-                        <div class="text-3xl mb-2">💡</div>
-                        <h4 class="font-bold text-primary text-sm">Innovation</h4>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-200 hover:border-accent transition-colors">
-                        <div class="text-3xl mb-2">🤝</div>
-                        <h4 class="font-bold text-primary text-sm">Trust & Transparency</h4>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-200 hover:border-accent transition-colors">
-                        <div class="text-3xl mb-2">👥</div>
-                        <h4 class="font-bold text-primary text-sm">Collaboration</h4>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-200 hover:border-accent transition-colors">
-                        <div class="text-3xl mb-2">⚡</div>
-                        <h4 class="font-bold text-primary text-sm">Agility</h4>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl text-center shadow-sm border border-gray-200 hover:border-accent transition-colors">
-                        <div class="text-3xl mb-2">🎯</div>
-                        <h4 class="font-bold text-primary text-sm">Customer Success</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
+</section>
 
-    <!-- Services Section -->
-    <section class="py-20 bg-white border-y border-gray-200" id="services">
-        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
-                <span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">What We Offer</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-4">Our Services</h2>
-                <p class="text-secondary leading-relaxed">
-                    We provide end-to-end professional solutions that enable organizations to improve quality, optimize operations, and drive business excellence.
-                </p>
-            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Service Card 1 -->
-                <div class="bg-background p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-all fade-up group">
-                    <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                        <span class="material-symbols-outlined text-2xl">fact_check</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Inspection & Quality Assurance</h3>
-                    <p class="text-secondary text-sm leading-relaxed">Comprehensive inspection and QA frameworks to safeguard standards across operational workflows.</p>
-                </div>
 
-                <!-- Service Card 2 -->
-                <div class="bg-background p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-all fade-up group">
-                    <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                        <span class="material-symbols-outlined text-2xl">shopping_cart</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Procurement & Supply Support</h3>
-                    <p class="text-secondary text-sm leading-relaxed">Strategic procurement coordination and supply support ensuring component integrity and flow.</p>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="bg-background p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-all fade-up group">
-                    <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                        <span class="material-symbols-outlined text-2xl">settings_suggest</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Operations & Process Management</h3>
-                    <p class="text-secondary text-sm leading-relaxed">End-to-end management protocols designed to streamline processes and minimize operational friction.</p>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="bg-background p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-all fade-up group">
-                    <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                        <span class="material-symbols-outlined text-2xl">warehouse</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Warehouse & Inventory Management</h3>
-                    <p class="text-secondary text-sm leading-relaxed">Optimized storage setups, inventory verification, and inventory control solutions.</p>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="bg-background p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-all fade-up group">
-                    <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                        <span class="material-symbols-outlined text-2xl">local_shipping</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Logistics & Dispatch Coordination</h3>
-                    <p class="text-secondary text-sm leading-relaxed">Seamless dispatch tracking, logistics verification, and timely fulfillment assistance.</p>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div class="bg-background p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-all fade-up group">
-                    <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                        <span class="material-symbols-outlined text-2xl">school</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Training & Capability Development</h3>
-                    <p class="text-secondary text-sm leading-relaxed">Custom training programs to empower workforces with technical expertise and operational mastery.</p>
-                </div>
-
-                <!-- Service Card 7 -->
-                <div class="bg-background p-8 rounded-2xl border border-gray-200 hover:shadow-md transition-all fade-up group md:col-span-2 lg:col-span-1">
-                    <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                        <span class="material-symbols-outlined text-2xl">assessment</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Audit & Performance Assessment</h3>
-                    <p class="text-secondary text-sm leading-relaxed">Independent audits and metric-driven evaluations to identify efficiency gaps and ensure compliance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Veriton -->
-    <section class="py-20 bg-background" id="why-veriton">
-        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6 fade-up">
-                    <span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">Why Choose Veriton?</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary">
-                        Built on Trust, Expertise, and Consistent Performance
-                    </h2>
-                    <p class="text-secondary leading-relaxed">
-                        At Veriton, we believe successful partnerships are built on trust, expertise, and consistent performance. Our commitment to excellence enables us to deliver scalable and result-oriented solutions that help businesses operate more efficiently and competitively.
-                    </p>
-                    
-                    <div class="space-y-3 pt-2">
-                        <div class="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                            <span class="material-symbols-outlined text-accent font-bold">check_circle</span>
-                            <span class="font-bold text-primary">Deep Industry Knowledge</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                            <span class="material-symbols-outlined text-accent font-bold">check_circle</span>
-                            <span class="font-bold text-primary">Client-Centric Approach</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                            <span class="material-symbols-outlined text-accent font-bold">check_circle</span>
-                            <span class="font-bold text-primary">Process Excellence</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                            <span class="material-symbols-outlined text-accent font-bold">check_circle</span>
-                            <span class="font-bold text-primary">Skilled & Dedicated Teams</span>
-                        </div>
-                        <div class="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
-                            <span class="material-symbols-outlined text-accent font-bold">check_circle</span>
-                            <span class="font-bold text-primary">Agile Execution & Timely Delivery</span>
-                        </div>
-                    </div>
-
-                    <p class="font-highlight-italic text-lg text-primary pt-4">
-                        Focused on quality, driven by innovation, and committed to delivering measurable business value.
-                    </p>
-                </div>
-
-                <div class="relative bg-primary rounded-2xl p-8 md:p-12 text-white shadow-xl fade-up">
-                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
-                    <h3 class="text-2xl font-bold mb-6">Partner with Veriton Today</h3>
-                    <p class="text-gray-200 leading-relaxed mb-8">
-                        Experience operational optimization and precision quality assurance tailored specifically to your organization's needs.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-                            <span class="material-symbols-outlined text-accent">thumb_up</span>
-                            <div>
-                                <h4 class="font-bold text-sm">Scalable Solutions</h4>
-                                <p class="text-xs text-gray-300">Adaptable frameworks for projects of any size.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-                            <span class="material-symbols-outlined text-accent">verified</span>
-                            <div>
-                                <h4 class="font-bold text-sm">Measurable Results</h4>
-                                <p class="text-xs text-gray-300">Driven by business value and performance metrics.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-20 bg-white border-t border-gray-200" id="contact">
-        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="max-w-2xl mx-auto text-center fade-up">
-                <span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">Get In Touch</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-8">Contact Us</h2>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-                    <div class="bg-background p-6 rounded-2xl border border-gray-200 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center shrink-0">
-                            <span class="material-symbols-outlined text-2xl">call</span>
-                        </div>
-                        <div>
-                            <span class="text-xs text-secondary font-semibold uppercase block">Phone</span>
-                            <a href="tel:9545459346" class="text-lg font-bold text-primary hover:text-accent transition-colors">9545459346</a>
-                        </div>
-                    </div>
-
-                    <div class="bg-background p-6 rounded-2xl border border-gray-200 flex items-center gap-4">
-                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center shrink-0">
-                            <span class="material-symbols-outlined text-2xl">mail</span>
-                        </div>
-                        <div>
-                            <span class="text-xs text-secondary font-semibold uppercase block">Email</span>
-                            <a href="mailto:admin@veritoncore.com" class="text-lg font-bold text-primary hover:text-accent transition-colors">admin@veritoncore.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-primary text-white py-12 border-t border-gray-800">
-    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="space-y-4">
-            <div class="text-2xl font-bold flex items-center gap-2">
-                <span class="material-symbols-outlined text-accent text-3xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
-                <span>Veriton</span>
-            </div>
-            <p class="text-sm text-gray-300 leading-relaxed max-w-sm">
-                Your trusted partner for quality assurance, validation, and process optimization across diverse industries.
-            </p>
-        </div>
-        <div>
-            <h4 class="font-bold text-accent mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
-            <ul class="space-y-2 text-sm text-gray-300">
-                <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#vision-mission" class="hover:text-white transition-colors">Vision & Mission</a></li>
-                <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
-                <li><a href="#why-veriton" class="hover:text-white transition-colors">Why Choose Us</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4 class="font-bold text-accent mb-4 text-sm uppercase tracking-wider">Contact Info</h4>
-            <ul class="space-y-2 text-sm text-gray-300">
-                <li>Phone: 9545459346</li>
-                <li>Email: admin@veritoncore.com</li>
-            </ul>
-        </div>
-    </div>
-    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop mt-8 pt-8 border-t border-white/10 text-center text-xs text-gray-400">
-        <p>© 2026 Veriton Technical Solutions. All rights reserved.</p>
-    </div>
+<section id="contact" class="py-16 bg-white border-t border-gray-200">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-10">
+<div class="fade-up">
+<span class="text-xs font-bold text-accent uppercase tracking-widest bg-accent/10 px-3 py-1 rounded-full">Contact Us</span>
+<h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-3">Let's Discuss Your Requirement</h2>
+<p class="text-secondary">Call, email, or send the form — our team responds within one business day.</p>
+<div class="mt-6 space-y-4">
+<a href="tel:+919545459346" class="flex items-center gap-4 bg-background border rounded-xl p-4 hover:border-accent transition"><span class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center"><span class="material-symbols-outlined">call</span></span><span><span class="block text-xs uppercase font-semibold text-secondary">Phone</span><span class="font-bold text-primary text-lg">9545459346</span></span></a>
+<a href="mailto:admin@veritoncore.com" class="flex items-center gap-4 bg-background border rounded-xl p-4 hover:border-accent transition"><span class="w-12 h-12 bg-accent text-white rounded-xl flex items-center justify-center"><span class="material-symbols-outlined">mail</span></span><span><span class="block text-xs uppercase font-semibold text-secondary">Email</span><span class="font-bold text-primary text-lg">admin@veritoncore.com</span></span></a>
+</div>
+</div>
+<div class="fade-up bg-background border rounded-2xl p-6 md:p-8">
+<form data-mailto="admin@veritoncore.com" class="space-y-4">
+<div class="grid sm:grid-cols-2 gap-4">
+<div><label class="text-sm font-semibold text-primary">Name</label><input name="name" required class="mt-1 w-full rounded-lg border-gray-300" placeholder="Your name"/></div>
+<div><label class="text-sm font-semibold text-primary">Phone</label><input name="phone" required class="mt-1 w-full rounded-lg border-gray-300" placeholder="Mobile number"/></div>
+</div>
+<div><label class="text-sm font-semibold text-primary">Service Needed</label><select name="service" class="mt-1 w-full rounded-lg border-gray-300"><option>Inspection and Quality Assurance</option><option>Industrial Manpower Supply</option><option>Warehouse and Inventory</option><option>Logistics and Dispatch</option><option>Training and Audit</option></select></div><div><label class="text-sm font-semibold text-primary">Message</label><textarea name="message" rows="4" class="mt-1 w-full rounded-lg border-gray-300" placeholder="Site, headcount and location"></textarea></div><button class="btn-primary w-full text-white font-semibold py-3.5 rounded-lg">Send Enquiry</button><p data-form-success class="hidden text-sm font-semibold text-green-700 bg-green-50 border border-green-200 rounded-lg p-3">Thanks! Your enquiry is ready in your email app.</p></form></div></div></section></main>
+<footer class="bg-primary text-white">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+<div>
+<div class="flex items-center gap-3"><img src="public/assets/images/logo.png" alt="Veriton logo" class="h-11 w-11 object-contain rounded-lg bg-white"/><div class="leading-tight"><p class="font-heading font-bold text-lg">VERITON</p><p class="text-[11px] tracking-[0.18em] text-white/70 uppercase">Technical Solutions</p></div></div>
+<p class="text-sm text-white/75 leading-relaxed mt-4">Your trusted partner for quality assurance, validation, process optimization and dependable industrial manpower.</p>
+</div>
+<div>
+<h4 class="font-bold text-accent mb-4 text-sm uppercase tracking-wider">Company</h4>
+<ul class="space-y-2.5 text-sm text-white/80">
+<li><a class="hover:text-white" href="public/subpages/about.html">About Us</a></li>
+<li><a class="hover:text-white" href="public/subpages/services.html">All Services</a></li>
+<li><a class="hover:text-white" href="public/subpages/industries.html">Industries Served</a></li>
+<li><a class="hover:text-white" href="public/subpages/manpower.html">Manpower Supply</a></li>
+<li><a class="hover:text-white" href="public/subpages/careers.html">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-accent mb-4 text-sm uppercase tracking-wider">Services</h4>
+<ul class="space-y-2.5 text-sm text-white/80">
+<li><a class="hover:text-white" href="public/subpages/service-inspection-qa.html">Inspection and QA</a></li>
+<li><a class="hover:text-white" href="public/subpages/service-warehouse.html">Warehouse and Inventory</a></li>
+<li><a class="hover:text-white" href="public/subpages/service-logistics.html">Logistics and Dispatch</a></li>
+<li><a class="hover:text-white" href="public/subpages/service-training.html">Training</a></li>
+<li><a class="hover:text-white" href="public/subpages/service-audit.html">Audit and Assessment</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-accent mb-4 text-sm uppercase tracking-wider">Contact Info</h4>
+<ul class="space-y-2.5 text-sm text-white/80">
+<li><a class="hover:text-white" href="tel:+919545459346">Phone: 9545459346</a></li>
+<li><a class="hover:text-white" href="mailto:admin@veritoncore.com">Email: admin@veritoncore.com</a></li>
+<li>Mon-Sat, 9:00-19:00 IST</li>
+</ul>
+<a href="public/subpages/quote.html" class="btn-accent inline-block mt-4 text-white text-sm font-semibold px-5 py-2.5 rounded-lg">Request Manpower</a>
+</div>
+</div>
+<div class="border-t border-white/10">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/65">
+<p>© <span data-year>2026</span> Veriton Technical Solutions. All rights reserved.</p>
+<div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+<a class="hover:text-white" href="public/subpages/privacy.html">Privacy Policy</a>
+<a class="hover:text-white" href="public/subpages/terms.html">Terms of Service</a>
+<a class="hover:text-white" href="public/subpages/cookies.html">Cookie Policy</a>
+<a class="hover:text-white" href="public/subpages/sitemap.html">Sitemap</a>
+</div>
+</div>
+</div>
 </footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-up').forEach(element => {
-            observer.observe(element);
-        });
-
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-            } else {
-                navbar.classList.remove('shadow-md');
-            }
-        });
-    });
-</script>
+<div id="cookie-banner" class="hidden translate-y-24 opacity-0 fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-[60] bg-white rounded-2xl shadow-2xl border p-5">
+<p class="font-heading font-bold text-primary text-sm">We value your privacy</p>
+<p class="text-[13px] text-secondary mt-1">We use cookies to improve browsing and analyze traffic. See our <a href="public/subpages/cookies.html" class="text-accent font-semibold">Cookie Policy</a>.</p>
+<div class="flex gap-3 mt-4">
+<button id="cookie-accept" class="flex-1 btn-primary text-white text-sm font-semibold py-2.5 rounded-lg">Accept</button>
+<button id="cookie-decline" class="flex-1 text-sm font-semibold py-2.5 rounded-lg border text-secondary">Decline</button>
+</div>
+</div>
+<script src="public/js/main.js"></script>
 </body>
 </html>
