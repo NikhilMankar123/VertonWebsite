@@ -1,0 +1,28 @@
+/* Veriton Technical Solutions - Shared Styles */
+:root{
+  --primary:#0A3D62; --secondary:#4A4A4A; --accent:#F39C12; --bg:#F4F4F4;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--bg);color:#1A1C1C}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+.font-highlight{font-family:'Roboto',sans-serif;font-style:italic;font-weight:500}
+.nav-link{position:relative;font-weight:600}
+.nav-link::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--accent);transition:width .3s}
+.nav-link:hover::after,.nav-link.active::after{width:100%}
+.glass{background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.6)}
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:none}
+.hero-pattern{background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1px);background-size:22px 22px}
+.card-hover{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card-hover:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,61,98,.12);border-color:var(--accent)}
+.topbar-link:hover{color:var(--accent)}
+.btn-accent{background:var(--accent);transition:.25s}
+.btn-accent:hover{background:#d6890c;box-shadow:0 10px 24px rgba(243,156,18,.35)}
+.btn-primary{background:var(--primary);transition:.25s}
+.btn-primary:hover{background:#083152}
+#cookie-banner{transition:transform .4s ease,opacity .4s ease}
+.mobile-menu{transition:max-height .35s ease,opacity .35s ease;max-height:0;overflow:hidden;opacity:0}
+.mobile-menu.open{max-height:560px;opacity:1}
+.prose-legal h2{font-weight:700;color:var(--primary);margin:1.6rem 0 .6rem;font-size:1.35rem}
+.prose-legal p,.prose-legal li{color:#4A4A4A;line-height:1.75}
+.prose-legal ul{list-style:disc;padding-left:1.4rem;margin:.6rem 0}
