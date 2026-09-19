@@ -10,7 +10,7 @@
 <url><loc>https://veritoncore.com/subpages/careers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://veritoncore.com/subpages/service-inspection-qa.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://veritoncore.com/subpages/service-procurement.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-<url><loc>https://veritoncore.com/subpages/service-operations.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<url><loc>https://veritoncore.com/subpages/service-validation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://veritoncore.com/subpages/service-warehouse.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://veritoncore.com/subpages/service-logistics.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 <url><loc>https://veritoncore.com/subpages/service-training.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -19,5 +19,6 @@
 <url><loc>https://veritoncore.com/subpages/terms.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 <url><loc>https://veritoncore.com/subpages/cookies.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 <url><loc>https://veritoncore.com/subpages/sitemap.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+<url><loc>https://veritoncore.com/assets/docs/veriton-company-brochure.pdf</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
 
